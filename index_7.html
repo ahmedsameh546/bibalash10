@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bibalash Services | بيبالاش للخدمات الرقمية</title>
+<meta name="description" content="اشتراكات وخدمات رقمية بأسعار مناسبة وتسليم سريع. ماتخليش السعر يوقفك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0B0618; --surface:#150C2B; --surface2:#1D1139; --line:#2E1D55;
+  --text:#F3EEFF; --muted:#B5A8D6; --violet:#7C3AED; --lilac:#A78BFA; --glow:rgba(124,58,237,.45);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.8 "IBM Plex Sans Arabic",Tahoma,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Noto Kufi Arabic","IBM Plex Sans Arabic",Tahoma,sans-serif;margin:0;line-height:1.4}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.promo{background:var(--violet);color:#fff;text-align:center;font-size:14px;padding:7px 14px;line-height:1.6}
+.promo a{text-decoration:underline;font-weight:500}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(11,6,24,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0}
+.brand{font:800 20px "Noto Kufi Arabic",sans-serif;direction:ltr;white-space:nowrap}
+.brand span{color:var(--lilac)}
+.brand small{font:500 11px "IBM Plex Sans Arabic",sans-serif;letter-spacing:3px;color:var(--muted);margin-inline-start:6px}
+.links{display:flex;gap:22px;font-size:15px;color:var(--muted)}
+.links a:hover{color:#fff}
+.nav-wa{display:inline-flex;align-items:center;gap:8px;padding:9px 20px;border-radius:999px;background:var(--violet);color:#fff;font-weight:500;font-size:15px;box-shadow:0 6px 20px var(--glow);white-space:nowrap}
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,var(--glow),transparent 68%);inset:-100px auto auto -200px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:48px 0 64px;position:relative}
+.tag{display:inline-block;padding:4px 16px;border:1px solid var(--line);border-radius:999px;color:var(--lilac);font-size:14px;margin-bottom:16px;background:var(--surface)}
+.hero h1{font-size:clamp(34px,6vw,60px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--lilac)}
+.hero p{color:var(--muted);max-width:30em;margin:16px 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;background:var(--violet);color:#fff;border:0;cursor:pointer;font:500 16px "IBM Plex Sans Arabic",sans-serif;box-shadow:0 8px 26px var(--glow);transition:transform .2s;text-align:center}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;border:1.5px solid var(--lilac);color:var(--lilac);box-shadow:none}
+.ticks{display:flex;gap:18px;flex-wrap:wrap;margin-top:22px;font-size:14px;color:var(--muted)}
+.ticks span::before{content:"✓";color:var(--lilac);margin-inline-end:6px;font-weight:700}
+.logo-card{border-radius:28px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 70px var(--glow)}
+.logo-card img{display:block;width:100%;height:auto}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);background:var(--surface)}
+.trust div{padding:20px 14px;text-align:center;border-inline-start:1px solid var(--line);font-size:14px;color:var(--muted);line-height:1.6}
+.trust div:first-child{border-inline-start:0}
+.trust b{display:block;color:var(--text);font:700 16px "Noto Kufi Arabic",sans-serif}
+section{padding:72px 0}
+.head{max-width:560px;margin-bottom:30px}
+.head h2{font-size:clamp(26px,4vw,38px)}
+.head p{color:var(--muted);margin:8px 0 0}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:22px}
+.search{flex:1;min-width:200px;background:var(--surface);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:11px 22px;font:400 16px "IBM Plex Sans Arabic",sans-serif}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.chip{padding:8px 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;font:400 15px "IBM Plex Sans Arabic",sans-serif}
+.chip[aria-pressed="true"]{background:var(--violet);border-color:var(--violet);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--lilac);transform:translateY(-4px)}
+.card svg,.card .art{display:block;width:100%;height:auto;aspect-ratio:400/220;object-fit:cover}
+.badge{position:absolute;top:12px;inset-inline-start:12px;background:#fff;color:#4C1D95;font-weight:700;font-size:13px;border-radius:999px;padding:1px 12px;z-index:2}
+.body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.body h3{font-size:18px}
+.body p{margin:0;color:var(--muted);font-size:15px;line-height:1.7;flex:1}
+.price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:6px}
+.price b{font:800 26px "Noto Kufi Arabic",sans-serif;color:var(--lilac)}
+.price small{color:var(--muted)}
+.price s{color:var(--muted);font-size:15px}
+.price i{font-style:normal;background:rgba(124,58,237,.25);color:var(--lilac);border-radius:8px;padding:0 8px;font-size:13px}
+.card .btn{padding:10px 0;box-shadow:none;margin-top:8px}
+.empty{color:var(--muted);padding:30px 0}
+.multi{font-size:13.5px;color:var(--lilac);margin-top:2px}
+.pills{display:flex;flex-wrap:wrap;gap:12px}
+.pill{padding:12px 24px;border-radius:999px;background:var(--surface);border:1px solid var(--lilac);font-weight:500}
+.note{color:var(--muted);margin:18px 0 0;font-size:15px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px}
+.box .ic{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--violet),#4C1D95);display:grid;place-items:center;font-size:24px;margin-bottom:12px}
+.box h3{font-size:18px;margin-bottom:6px}
+.box p{margin:0;color:var(--muted);font-size:15px;line-height:1.8}
+.steps .box b{font:800 36px "Noto Kufi Arabic",sans-serif;color:var(--lilac);display:block;line-height:1.3}
+.band{background:var(--surface2);border-block:1px solid var(--line)}
+.rev .stars{color:#C4B5FD;letter-spacing:2px}
+.rev p{margin:10px 0 14px;color:var(--text)}
+.rev .who{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:14px}
+.rev .av{width:38px;height:38px;border-radius:50%;background:var(--violet);display:grid;place-items:center;color:#fff;font-weight:700}
+.faq{max-width:760px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:4px 20px;margin-bottom:12px}
+summary{cursor:pointer;padding:12px 0;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--lilac);font-size:22px;line-height:1.3}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 14px;color:var(--muted)}
+.cta{text-align:center;border-radius:30px;padding:56px 22px;background:linear-gradient(135deg,#4C1D95,#7C3AED);box-shadow:0 0 70px var(--glow)}
+.cta h2{font-size:clamp(26px,4.4vw,42px)}
+.cta p{margin:12px auto 26px;max-width:28em;color:#EDE5FF}
+.cta .btn{background:#fff;color:#4C1D95;box-shadow:none}
+footer{border-top:1px solid var(--line);padding:36px 0 40px;color:var(--muted);font-size:14px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+.foot a:hover{color:#fff}
+.fab{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:24px;z-index:30;box-shadow:0 8px 26px var(--glow);border:0;cursor:pointer}
+#wa{inset-inline-start:16px;background:var(--violet);color:#fff}
+#up{inset-inline-end:16px;background:var(--surface2);color:var(--lilac);border:1px solid var(--lilac);opacity:0;pointer-events:none;transition:opacity .25s;font:700 22px sans-serif}
+#up.show{opacity:1;pointer-events:auto}
+@media (max-width:820px){
+  .links{display:none}
+  .hero-grid{grid-template-columns:1fr;padding:28px 0 48px;gap:28px}
+  .logo-card{max-width:320px;margin:auto}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .trust div:nth-child(3){border-inline-start:0}
+  .trust div:nth-child(n+3){border-top:1px solid var(--line)}
+  .cols3{grid-template-columns:1fr}
+  section{padding:52px 0}
+  .brand{font-size:17px}.brand small{display:none}
+  .nav-wa{padding:8px 16px;font-size:14px}
+  .btns .btn{flex:1}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .body{padding:12px 12px 14px}.body h3{font-size:16px}.body p{font-size:13.5px}.price b{font-size:21px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== v3: حركة وتصميم قريب من المتاجر الكبيرة ===== */
+html{scroll-padding-top:90px}
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes floaty{50%{transform:translateY(-12px)}}
+@keyframes tick{to{transform:translateX(-50%)}}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(124,58,237,.6)}100%{box-shadow:0 0 0 16px rgba(124,58,237,0)}}
+.hero .tag,.hero h1,.hero p,.hero .btns,.hero .ticks,.hero .quick{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+.hero h1{animation-delay:.1s}.hero p{animation-delay:.2s}.hero .btns{animation-delay:.3s}.hero .ticks{animation-delay:.4s}.hero .quick{animation-delay:.5s}
+.logo-card{animation:floaty 6s ease-in-out infinite}
+.promo{padding:0;overflow:hidden}
+.promo:hover .tick{animation-play-state:paused}
+.tick{display:flex;width:max-content;animation:tick 30s linear infinite;font-size:14px;line-height:2.3}
+.tick span{padding:0 34px;white-space:nowrap}
+header.top.sc{box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.nav-r{display:flex;gap:10px;align-items:center}
+.nav-wa{animation:ring 2.4s infinite}
+.cart-btn{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--text);display:grid;place-items:center;cursor:pointer}
+.cart-btn b,.bnav i{position:absolute;top:-4px;inset-inline-end:-4px;min-width:20px;height:20px;border-radius:99px;background:var(--violet);color:#fff;font:700 12px/20px sans-serif;text-align:center;padding:0 5px;font-style:normal}
+.cart-btn b[hidden],.bnav i[hidden]{display:none}
+.catbar{display:flex;gap:8px;overflow-x:auto;padding:0 0 12px;scrollbar-width:none}
+.catbar::-webkit-scrollbar{display:none}
+.catbar .chip{white-space:nowrap;flex:none}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;inset:0 auto 0 -60%;width:40%;background:rgba(255,255,255,.28);transform:skewX(-20deg);transition:inset-inline-start .6s}
+.btn:hover::after{inset-inline-start:130%}
+.quick{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.quick a{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:8px 16px;line-height:1.5;transition:border-color .2s,transform .2s}
+.quick a:hover{border-color:var(--lilac);transform:translateY(-3px)}
+.quick b{display:block;font-size:15px}.quick small{color:var(--lilac);font-size:13px}
+.bun{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:8px;position:relative;overflow:hidden}
+.bun::before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--surface2);top:-70px;inset-inline-start:-70px}
+.bun>*{position:relative}
+.bun h3{font-size:20px}.bun small{color:var(--muted)}
+.bun ul{list-style:none;margin:6px 0;padding:0;color:var(--muted);font-size:15px;flex:1}
+.bun li::before{content:"✓";color:var(--lilac);margin-inline-end:8px;font-weight:700}
+.bun .save{align-self:flex-start;background:var(--violet);color:#fff;border-radius:99px;padding:0 14px;font-size:14px}
+.bun s{color:var(--muted)}.bun .np{font:800 30px "Noto Kufi Arabic",sans-serif;color:var(--lilac)}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px}
+.tile2{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;text-align:right;cursor:pointer;color:var(--text);font:inherit;display:flex;flex-direction:column;gap:6px;transition:transform .25s,border-color .25s}
+.tile2:hover{transform:translateY(-5px);border-color:var(--lilac)}
+.tile2 .ti{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--violet),#4C1D95);display:grid;place-items:center;transition:transform .3s}
+.tile2:hover .ti{transform:rotate(-8deg) scale(1.08)}
+.tile2 b{font:700 17px "Noto Kufi Arabic",sans-serif}.tile2 small{color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 10px}
+.stat b{display:block;font:800 40px "Noto Kufi Arabic",sans-serif;color:var(--lilac);line-height:1.3}
+.stat span{color:var(--muted);font-size:15px}
+.acts{display:flex;gap:8px;margin-top:8px}
+.acts .btn{margin:0;flex:1;padding:10px 0}
+.acts .btn.sm{flex:none;width:46px;background:var(--surface2);color:var(--lilac);border:1px solid var(--line)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.6);opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+.ov.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;bottom:0;inset-inline-start:0;width:min(420px,100%);background:var(--surface);border-inline-end:1px solid var(--line);z-index:50;transform:translateX(105%);transition:transform .35s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px)}
+.drawer.open{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dh button{background:none;border:0;color:var(--text);font-size:22px;cursor:pointer;width:44px;height:44px}
+.dl{flex:1;overflow:auto;padding:14px 20px}
+.it{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line);align-items:center}
+.it small{color:var(--muted);display:block}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:var(--surface2);color:var(--text);cursor:pointer;font-size:18px}
+.df{padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.tot{display:flex;justify-content:space-between;font-size:18px;margin-bottom:12px}.tot b{color:var(--lilac);font-family:"Noto Kufi Arabic",sans-serif}
+.df .btn{display:block}.df .note{font-size:13px;margin:10px 0 0;text-align:center}
+.bnav{display:none}
+@media (max-width:820px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  body{padding-bottom:74px}
+  #wa{display:none}
+  #up{bottom:calc(86px + env(safe-area-inset-bottom,0px))}
+  .bnav{display:flex;position:fixed;bottom:0;inset-inline:0;z-index:30;background:rgba(21,12,43,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+  .bnav a,.bnav button{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;font:400 12px "IBM Plex Sans Arabic",sans-serif;color:var(--muted);background:none;border:0;position:relative;padding:4px 0;cursor:pointer}
+  .bnav i{top:-2px;inset-inline-end:calc(50% - 24px)}
+  .acts .btn.sm{width:42px}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1!important;transform:none!important}}
+
+/* ===== v4: صفحة الخدمة والفترات ===== */
+.card h3 a{color:inherit}.card .clk{display:block}
+.price small:first-child{color:var(--muted)}
+.per{font-size:13px;color:var(--lilac);line-height:1.6;margin-top:2px}
+.acts{flex-wrap:wrap}
+.acts .btn{flex:1 1 120px;padding:10px 6px;font-size:15px}
+.btn.alt{background:var(--surface2);color:var(--lilac);border:1px solid var(--lilac);box-shadow:none}
+.crumb{font-size:14px;color:var(--muted);padding:18px 0 14px}
+.crumb a:hover{color:var(--lilac)}
+.pp{display:grid;grid-template-columns:1fr 1.1fr;gap:34px;align-items:start}
+.pp-art{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 0 60px var(--glow)}
+.pp-art svg,.pp-art .art{display:block;width:100%;height:auto}
+.pp-info h1{font-size:clamp(28px,4.4vw,42px)}
+.pd{color:var(--muted);margin:8px 0 6px}
+.sh{font-size:20px;margin:24px 0 12px}.sh.sec{margin-top:48px;font-size:24px}
+.plans{display:grid;gap:10px}
+.plan{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--surface);border:1.5px solid var(--line);border-radius:16px;padding:14px 18px;color:var(--text);cursor:pointer;font:inherit;text-align:right;transition:border-color .2s,background .2s,transform .2s}
+.plan:hover{transform:translateY(-2px)}
+.plan[aria-checked="true"]{border-color:var(--lilac);background:var(--surface2)}
+.plan .pl{display:flex;flex-direction:column}.plan .pl small{color:var(--muted);font-size:13px}
+.plan .pr{white-space:nowrap}.plan .pr b{font:800 22px "Noto Kufi Arabic",sans-serif;color:var(--lilac)}.plan .pr s{color:var(--muted);margin-inline-end:8px}
+.sum{display:flex;justify-content:space-between;align-items:center;margin:16px 0 12px;padding:12px 4px;border-top:1px dashed var(--line);font-size:17px}
+.sum .tt{font:800 26px "Noto Kufi Arabic",sans-serif;color:var(--lilac)}
+.acts.big .btn{padding:14px 10px;font-size:16px}
+.det{margin:0;padding:0;list-style:none;color:var(--muted)}
+.det li{padding:6px 0}.det li::before{content:"✓";color:var(--lilac);margin-inline-end:10px;font-weight:700}
+.bun li a{color:var(--text)}.bun li a:hover{color:var(--lilac)}
+@media (max-width:820px){.pp{grid-template-columns:1fr;gap:20px}.acts .btn{flex:1 1 100%}.card .acts .btn{flex:1 1 calc(50% - 4px)}.plan{padding:12px 14px}}
+</style>
+<script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<div class="promo" dir="ltr"><div class="tick"><span dir="rtl">⚡ تسليم سريع بعد تأكيد الدفع</span><span dir="rtl">🛡️ ضمان طول فترة الاشتراك</span><span dir="rtl">💳 ادفع انستا باي أو محفظة كاش أو فوري</span><span dir="rtl">💬 اطلب من واتساب 01151619619</span><span dir="rtl">🔥 ماتخليش السعر يوقفك</span><span dir="rtl">⚡ تسليم سريع بعد تأكيد الدفع</span><span dir="rtl">🛡️ ضمان طول فترة الاشتراك</span><span dir="rtl">💳 ادفع انستا باي أو محفظة كاش أو فوري</span><span dir="rtl">💬 اطلب من واتساب 01151619619</span><span dir="rtl">🔥 ماتخليش السعر يوقفك</span></div></div>
+<header class="top"><div class="wrap"><nav>
+  <a class="brand" href="#top">BIBA<span>LASH</span><small>SERVICES</small></a>
+  <div class="links"><a href="#bundles">الباقات</a><a href="#products">الاشتراكات</a><a href="#trust">الأمان</a><a href="#reviews">آراء العملاء</a><a href="#faq">أسئلة</a></div>
+  <div class="nav-r"><button class="cart-btn" data-cart aria-label="السلة"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 12h11l2-8H6"/></svg><b id="cc" hidden>0</b></button><a class="nav-wa" data-wa href="https://wa.me/201151619619" target="_blank" rel="noopener">💬 واتساب</a></div>
+</nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap"><div class="hero-grid">
+  <div>
+    <span class="tag">Bibalash Services · خدمات رقمية</span>
+    <h1>ماتخليش <em>السعر</em> يوقفك</h1>
+    <p>عايز نتفليكس أو سبوتيفاي أو ChatGPT أو كانفا؟ عندنا اشتراكات بأسعار على قد الإيد، وبنسلمك بسرعة وبنفضل معاك لحد ما تتأكد إن كل حاجة شغالة تمام.</p>
+    <div class="btns">
+      <a class="btn" data-wa href="https://wa.me/201151619619" target="_blank" rel="noopener">اطلب دلوقتي على واتساب</a>
+      <a class="btn ghost" href="#products">شوف الاشتراكات</a>
+    </div>
+    <div class="ticks"><span>تسليم سريع</span><span>دعم بعد البيع</span><span>دفع آمن وطرق كتير</span><span>أسعار تنافسية</span></div>
+    <div class="quick" id="quick"></div>
+  </div>
+  <div class="logo-card"><img src="data:image/webp;base64,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" alt="شعار بيبالاش للخدمات الرقمية" width="520" height="520"></div>
+</div></div></div>
+
+<div class="trust">
+  <div><b>⚡ تسليم سريع</b>بعد تأكيد الدفع على طول</div>
+  <div><b>💸 سعر يفرق</b>وخصومات على المدد الطويلة</div>
+  <div><b>🛟 دعم معاك</b>على واتساب في أي وقت</div>
+  <div><b>🔁 ضمان</b>لو حصلت مشكلة بنصلحها أو نبدّلها</div>
+</div>
+
+<section id="bundles"><div class="wrap">
+  <div class="head"><h2>باقات توفير</h2><p>اشترك في أكتر من خدمة مع بعض واحسب توفيرك.</p></div>
+  <div class="cols3" id="bundles-grid"></div>
+</div></section>
+
+<section id="cats" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>تسوّق حسب القسم</h2></div>
+  <div class="tiles" id="tiles"></div>
+</div></section>
+
+<section id="products" style="padding-top:0"><div class="wrap">
+  <div class="head"><h2>اختار اشتراكك</h2><p>دوس على "اطلب" وهتفتحلك محادثة واتساب جاهزة، وإحنا بنكمّل معاك.</p></div>
+  <div class="tools"><input class="search" id="q" type="search" placeholder="دوّر على خدمة... (نتفليكس، سبوتيفاي)" aria-label="بحث"></div>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="band" id="why"><div class="wrap">
+  <div class="head"><h2>ليه تشتري من بيبالاش؟</h2><p>عشان مش بنبيعلك وخلاص، إحنا بنسيبك مرتاح بعد الشراء.</p></div>
+  <div class="cols3" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+    <div class="box"><div class="ic">💰</div><h3>أسعار على قد الإيد</h3><p>فلسفتنا إن السعر ماينفعش يبقى عائق. بنوفرلك الاشتراك اللي محتاجه بسعر مناسب من غير لف ودوران.</p></div>
+    <div class="box"><div class="ic">⚡</div><h3>تسليم من غير تأخير</h3><p>أول ما الدفع يتأكد بتستلم بيانات اشتراكك، من غير ما تفضل مستني بالساعات.</p></div>
+    <div class="box"><div class="ic">🛟</div><h3>دعم بعد البيع</h3><p>لو الاشتراك وقف أو حصلت أي مشكلة، كلمنا واتساب وهنحلها معاك بدل ما تضيع فلوسك.</p></div>
+    <div class="box"><div class="ic">🧩</div><h3>خدمات كتير في مكان واحد</h3><p>ترفيه وموسيقى وذكاء اصطناعي وتصميم وألعاب، كله تلاقيه عندنا وماتحتاجش تلف على حد.</p></div>
+    <div class="box"><div class="ic">🤝</div><h3>تعامل بسيط وواضح</h3><p>بنقولك السعر والمدة وطريقة التفعيل من الأول، من غير مفاجآت ولا رسوم مستخبية.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="head"><h2>تطلب إزاي؟</h2><p>٣ خطوات وتبقى مشترك.</p></div>
+  <div class="cols3 steps" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+    <div class="box"><b>1</b><h3>اختار الخدمة</h3><p>اتفرج على الاشتراكات واختار اللي يناسبك.</p></div>
+    <div class="box"><b>2</b><h3>ابعتلنا على واتساب</h3><p>دوس "اطلب" وهتلاقي رسالة جاهزة، ابعتها وخلاص.</p></div>
+    <div class="box"><b>3</b><h3>اشتري</h3><p>ادفع بالطريقة اللي تريحك، وبعدها بنسلمك اشتراكك ونتابع معاك لحد ما يشتغل.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="trust"><div class="wrap">
+  <div class="head"><h2>أمانك وثقتك أولاً</h2><p>مش عايزينك تشتري وإنت قلقان. دي التزاماتنا معاك.</p></div>
+  <div class="cols3">
+    <div class="box"><div class="ic">🔒</div><h3>كله واضح قبل الدفع</h3><p>السعر والمدة وطريقة التفعيل بتتأكد معاك في الشات قبل ما تدفع أي جنيه.</p></div>
+    <div class="box"><div class="ic">🛡️</div><h3>ضمان طول فترة الاشتراك</h3><p>لو حصلت مشكلة في الاشتراك بنصلحها أو نبدّلهولك، وماتسيبش لوحدك.</p></div>
+    <div class="box"><div class="ic">🙈</div><h3>بياناتك في أمان</h3><p>مش بنطلب منك غير اللي محتاجينه للتفعيل، ومش بنشارك بياناتك مع أي حد.</p></div>
+    <div class="box"><div class="ic">✅</div><h3>رقم رسمي واحد</h3><p>التعامل بيتم من واتساب 01151619619 بس. ماتحولش فلوس لأي رقم إلا لو اتأكدلك في الشات ده.</p></div>
+    <div class="box"><div class="ic">🔄</div><h3>متابعة بعد التسليم</h3><p>بنسأل عليك بعد ما تستلم لحد ما تتأكد إن كل حاجة شغالة تمام.</p></div>
+    <div class="box"><div class="ic">⚠️</div><h3>نصيحة أمان</h3><p>فعّل التحقق بخطوتين على حساباتك، وماتشاركش كلمات السر مع أي حد برة الخدمة.</p></div>
+  </div>
+</div></section>
+
+<section id="pay"><div class="wrap">
+  <div class="head"><h2>طرق الدفع</h2><p>ادفع بالطريقة الأسهل ليك.</p></div>
+  <div class="pills"><span class="pill">InstaPay · انستا باي</span><span class="pill">محفظة كاش</span><span class="pill">فوري</span><span class="pill">تاب تاب سند</span><span class="pill">براق</span></div>
+  <p class="note">بنبعتلك بيانات الدفع في الشات وقت الطلب، وبعد التحويل ابعتلنا إثبات الدفع وهنسلمك على طول.</p>
+</div></section>
+
+<section style="padding:40px 0"><div class="wrap"><div class="stats" id="stats">
+  <div class="stat"><b data-n id="s1">0</b><span>خدمة متاحة</span></div>
+  <div class="stat"><b data-n id="s2">0</b><span>أقسام</span></div>
+  <div class="stat"><b data-n id="s3">0</b><span>طرق دفع</span></div>
+  <div class="stat"><b>2025</b><span>بدأنا من</span></div>
+</div></div></section>
+
+<section class="band" id="reviews"><div class="wrap">
+  <div class="head"><h2>العملاء بيقولوا إيه؟</h2><p>تجارب ناس اشتركت معانا.</p></div>
+  <!-- ملاحظة: الآراء دي أمثلة للشكل فقط، استبدلها بآراء عملائك الحقيقية قبل النشر -->
+  <div class="cols3 rev" id="revs"></div>
+</div></section>
+
+<section id="faq"><div class="wrap faq">
+  <div class="head"><h2>أسئلة بتتسأل كتير</h2></div>
+  <details><summary>هستلم الاشتراك بعد قد إيه؟</summary><p>بعد ما الدفع يتأكد بنبعتلك البيانات في أسرع وقت، وغالباً بتتم الحكاية في دقايق على واتساب.</p></details>
+  <details><summary>إزاي أتأكد إني بتعامل مع الرقم الرسمي؟</summary><p>التعامل الرسمي بيتم من رقم الواتساب 01151619619 اللي في الموقع. وبيانات الدفع بتتبعتلك في الشات ده بس، فماتحولش لأي رقم تاني.</p></details>
+  <details><summary>لو الاشتراك وقف أو حصلت مشكلة أعمل إيه؟</summary><p>كلمنا على واتساب وابعتلنا المشكلة، وهنصلحها أو نبدّلك الاشتراك حسب الحالة خلال فترة الضمان.</p></details>
+  <details><summary>إزاي أدفع؟</summary><p>بنقولك طرق الدفع المتاحة وقت الطلب على واتساب، وبتختار اللي يريحك.</p></details>
+  <details><summary>أقدر أشترك لأكتر من شهر؟</summary><p>أكيد، وفي المدد الطويلة غالباً بيبقى فيه سعر أوفر. اسألنا وقت الطلب.</p></details>
+  <details><summary>مش لاقي الخدمة اللي عايزها؟</summary><p>ابعتلنا اسمها على واتساب، ممكن تكون متوفرة ومش معروضة هنا.</p></details>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="cta">
+    <h2>جاهز توفّر في اشتراكاتك؟</h2>
+    <p>ابعتلنا الخدمة اللي عايزها وهنرد عليك بالسعر ونخلصلك الطلب بسرعة.</p>
+    <a class="btn" data-wa href="https://wa.me/201151619619" target="_blank" rel="noopener">كلمنا على واتساب دلوقتي</a>
+  </div>
+</div></section>
+</main>
+<main id="pv" hidden></main>
+
+<footer><div class="wrap foot">
+  <div>© 2025 Bibalash Services — بيبالاش للخدمات الرقمية. كل الحقوق محفوظة.</div>
+  <div><a data-wa href="https://wa.me/201151619619" target="_blank" rel="noopener">الرقم الرسمي للتعامل (واتساب): 01151619619</a></div>
+</div></footer>
+<a class="fab" id="wa" data-wa href="https://wa.me/201151619619" target="_blank" rel="noopener" aria-label="واتساب">💬</a>
+<button class="fab" id="up" aria-label="الرجوع لأعلى">↑</button>
+
+<nav class="bnav" aria-label="تنقل سريع">
+<a href="#top"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8v10H3z"/></svg>الرئيسية</a>
+<a href="#cats"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>الأقسام</a>
+<button data-cart><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l3 12h11l2-8H6"/></svg>السلة<i id="cc2" hidden>0</i></button>
+<a data-wa href="https://wa.me/201151619619" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 01-11.5 7.2L3 21l1.8-5.5A8 8 0 1121 12z"/></svg>واتساب</a>
+</nav>
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="السلة">
+<div class="dh"><h3>سلتك</h3><button id="dx" aria-label="إغلاق السلة">✕</button></div>
+<div class="dl" id="dl"></div>
+<div class="df"><div class="tot"><span>الإجمالي</span><b id="tot">0</b></div><a class="btn" id="send" target="_blank" rel="noopener" href="#">ابعت الطلب على واتساب</a><p class="note">بنأكدلك السعر وطريقة الدفع في الشات قبل أي تحويل.</p></div>
+</aside>
+
+<script>
+/* ===== إعدادات المتجر ===== */
+const STORE = { whatsapp: "201151619619", currency: "ج.م" }; // الرقم بصيغة دولية بدون + أو صفر
+
+/* ===== الخدمات والفترات والأسعار =====
+   كل خدمة: { id, name, cat, desc, badge?, plans:[ ... ] }
+   • تعديل سعر:  غيّر قيمة price.
+   • مسح فترة:   امسح سطر الفترة بالكامل.
+   • إضافة فترة: انسخ سطر فترة والصقه وغيّر label وmonths وprice.
+   • months: عدد الشهور (1 = شهر، 12 = سنة، 0.25 = أسبوع، null = رصيد/باقة مش مدة).
+   • old: السعر قبل الخصم (اختياري).  img: رابط صورة للخدمة (اختياري).
+   • ✓ = سعر متأكد منه من سوق مصر (أسعار الحربي ستور بتاريخ 24/10/2026 وغيرها)
+   • ⚠ = تقديري أو من صفحة قديمة أو بدون مصدر: راجعه مع المورد قبل النشر. */
+const PRODUCTS = [
+  { id:"netflix", name:"Netflix", cat:"ترفيه", badge:"الأكثر مبيعاً", desc:"شاشة خاصة بيك بجودة عالية وبروفايل لوحدك.", plans:[
+    { label:"شهر",     months:1,  price:100 },   // ✓
+    { label:"6 شهور",  months:6,  price:500 },   // ✓
+    { label:"سنة",     months:12, price:1000 },  // ✓
+  ]},
+  { id:"chatgpt", name:"ChatGPT Plus", cat:"ذكاء اصطناعي", badge:"الأكثر مبيعاً", desc:"أحدث النماذج وسرعة أعلى في الشغل والدراسة.", plans:[
+    { label:"شهر - حساب مشترك",           months:1, price:250 },   // ✓
+    { label:"شهر - ChatGPT Go",           months:1, price:350 },   // ✓
+    { label:"شهر - Plus حساب خاص",        months:1, price:1200 },  // ✓
+    { label:"شهر - Plus رسمي على إيميلك", months:1, price:1455 },  // ✓
+  ]},
+  { id:"gemini", name:"Google Gemini", cat:"ذكاء اصطناعي", badge:"الأكثر مبيعاً", desc:"نموذج جوجل المتقدم للكتابة والتحليل والصور.", plans:[
+    { label:"شهر",     months:1,  price:250 },  // ✓
+    { label:"3 شهور",  months:3,  price:500 },  // ✓
+    { label:"سنة",     months:12, price:997 },  // ⚠ صفحة عمرها 6 شهور
+  ]},
+  { id:"perplexity", name:"Perplexity Pro", cat:"ذكاء اصطناعي", badge:"الأكثر مبيعاً", desc:"بحث ذكي بمصادر وإجابات سريعة للدراسة والشغل.", plans:[
+    { label:"شهر",                  months:1,  price:1450 },  // ✓ (فيه عروض سنوية أرخص عند موردين تانيين)
+    { label:"9 شهور - حساب خاص",    months:9,  price:3000 },  // ✓
+    { label:"سنة",                  months:12, price:2174 },  // ⚠ صفحة عمرها 6 شهور
+  ]},
+  { id:"adobe", name:"Adobe Creative Cloud", cat:"تصميم وإنتاجية", badge:"الأكثر مبيعاً", desc:"فوتوشوب وإليستريتور وبريمير وباقي برامج أدوبي.", plans:[
+    { label:"شهر",     months:1,  price:650 },   // ⚠ السوق بين 550 و675
+    { label:"3 شهور",  months:3,  price:1700 },  // ⚠
+    { label:"8 شهور",  months:8,  price:2928 },  // ⚠
+    { label:"سنة",     months:12, price:4400 },  // ⚠
+  ]},
+  { id:"claude", name:"Claude Pro", cat:"ذكاء اصطناعي", badge:"جديد", desc:"مساعد ذكي للكتابة والتحليل والبرمجة بحدود استخدام أعلى.", plans:[
+    { label:"شهر", months:1, price:1300 },  // ✓
+  ]},
+  { id:"grok", name:"SuperGrok", cat:"ذكاء اصطناعي", badge:"جديد", desc:"مساعد Grok بقدرات متقدمة وحدود استخدام أكبر.", plans:[
+    { label:"شهر", months:1, price:300 },  // ⚠ تقدير من سعر 6 دولار
+  ]},
+  { id:"kling", name:"Kling AI", cat:"ذكاء اصطناعي", badge:"جديد", desc:"اعمل فيديوهات بالذكاء الاصطناعي من نص أو صورة.", plans:[
+    { label:"أسبوع - ستاندرد", months:0.25, price:150 },   // ✓
+    { label:"شهر - ستاندرد",   months:1,    price:800 },   // ✓
+    { label:"شهر - برو",       months:1,    price:2700 },  // ✓
+  ]},
+  { id:"elevenlabs", name:"ElevenLabs", cat:"ذكاء اصطناعي", badge:"جديد", desc:"حوّل النص لصوت طبيعي للفيديوهات والبودكاست.", plans:[
+    { label:"شهر", months:1, price:450 },  // ⚠ صفحة قديمة
+  ]},
+  { id:"invideo", name:"InVideo AI", cat:"ذكاء اصطناعي", desc:"اعمل فيديو كامل من فكرة بس بمساعدة الذكاء الاصطناعي.", plans:[
+    { label:"شهر", months:1, price:300 },  // ⚠ بدون مصدر
+  ]},
+  { id:"canva", name:"Canva Pro", cat:"تصميم وإنتاجية", desc:"قوالب وعناصر مميزة وشيل الخلفية بضغطة.", plans:[
+    { label:"شهر",      months:1,  price:50 },   // ✓
+    { label:"سنة",      months:12, price:250 },  // ✓
+    { label:"3 سنين",   months:36, price:750 },  // ⚠
+  ]},
+  { id:"capcut", name:"CapCut Pro", cat:"تصميم وإنتاجية", desc:"مونتاج متقدم من غير علامة مائية.", plans:[
+    { label:"شهر - 500 كريدت",  months:1, price:250 },  // ✓
+    { label:"شهر - 1600 كريدت", months:1, price:300 },  // ✓
+  ]},
+  { id:"freepik", name:"Freepik Premium", cat:"تصميم وإنتاجية", badge:"جديد", desc:"صور وفيكتور وقوالب بدون حدود لشغلك التصميمي.", plans:[
+    { label:"شهر", months:1,  price:250 },   // ⚠ تقدير من 5 دولار
+    { label:"سنة", months:12, price:1400 },  // ⚠
+  ]},
+  { id:"envato", name:"Envato Elements", cat:"تصميم وإنتاجية", badge:"جديد", desc:"تحميل غير محدود: قوالب وخطوط وموسيقى وإضافات.", plans:[
+    { label:"شهر",     months:1,  price:240 },   // ⚠ صفحة عمرها 6 شهور
+    { label:"3 شهور",  months:3,  price:648 },   // ⚠
+    { label:"6 شهور",  months:6,  price:1200 },  // ⚠
+    { label:"سنة",     months:12, price:2000 },  // ⚠
+  ]},
+  { id:"figma", name:"Figma", cat:"تصميم وإنتاجية", desc:"صمم واجهات المواقع والتطبيقات واشتغل مع فريقك.", plans:[
+    { label:"شهر", months:1, price:250 },  // ⚠ بدون مصدر
+  ]},
+  { id:"autodesk", name:"Autodesk", cat:"تصميم وإنتاجية", desc:"برامج أوتوديسك لطلاب ومهندسين وشغل التصميم.", plans:[
+    { label:"سنة", months:12, price:300 },  // ⚠ صفحة عمرها سنة
+  ]},
+  { id:"m365", name:"Microsoft 365", cat:"شغل ودراسة", desc:"Word وExcel وPowerPoint ومعاهم مساحة تخزين.", plans:[
+    { label:"شهر",     months:1,  price:150 },  // ✓
+    { label:"6 شهور",  months:6,  price:350 },  // ✓
+    { label:"سنة",     months:12, price:550 },  // ✓
+  ]},
+  { id:"notion", name:"Notion Plus", cat:"شغل ودراسة", desc:"نظّم مذاكرتك وشغلك ومشاريعك في مكان واحد.", plans:[
+    { label:"شهر", months:1, price:200 },  // ✓
+  ]},
+  { id:"zoom", name:"Zoom Pro", cat:"شغل ودراسة", desc:"اجتماعات أطول وإمكانيات أكتر للشغل والدروس.", plans:[
+    { label:"شهر - حساب جديد", months:1, price:300 },  // ✓
+    { label:"شهر - على حسابك", months:1, price:400 },  // ✓
+  ]},
+  { id:"duolingo", name:"Duolingo", cat:"شغل ودراسة", desc:"اتعلم لغة جديدة من غير إعلانات وبمميزات كاملة.", plans:[
+    { label:"شهر", months:1,  price:150 },  // ✓
+    { label:"سنة", months:12, price:700 },  // ✓
+  ]},
+  { id:"shahid", name:"Shahid VIP", cat:"ترفيه", desc:"مسلسلات وأفلام عربي من غير إعلانات.", plans:[
+    { label:"شهر - موبايل ولاب",        months:1,  price:100 },   // ✓
+    { label:"سنة - موبايل ولاب",        months:12, price:1000 },  // ✓
+    { label:"شهر - شاشة وموبايل ولاب",  months:1,  price:250 },   // ✓
+    { label:"سنة - شاشة وموبايل ولاب",  months:12, price:2000 },  // ✓
+  ]},
+  { id:"disney", name:"Disney+", cat:"ترفيه", desc:"أفلام ومسلسلات للعيلة كلها بجودة 4K.", plans:[
+    { label:"شهر", months:1,  price:100 },   // ✓
+    { label:"سنة", months:12, price:1000 },  // ✓
+  ]},
+  { id:"spotify", name:"Spotify Premium", cat:"موسيقى", desc:"اسمع من غير إعلانات وحمّل الأغاني.", plans:[
+    { label:"شهر",     months:1, price:125 },  // ✓
+    { label:"3 شهور",  months:3, price:350 },  // ✓
+  ]},
+  { id:"anghami", name:"Anghami Plus", cat:"موسيقى", desc:"أكبر مكتبة موسيقى عربي من غير إعلانات.", plans:[
+    { label:"شهر",     months:1,  price:40 },   // ✓
+    { label:"3 شهور",  months:3,  price:120 },  // ✓
+    { label:"سنة",     months:12, price:350 },  // ✓
+  ]},
+  { id:"youtube", name:"YouTube Premium", cat:"موسيقى", desc:"يوتيوب من غير إعلانات وبيشتغل والشاشة مقفولة.", plans:[
+    { label:"شهر - حساب مصري",     months:1, price:100 },  // ✓
+    { label:"3 شهور - حساب مصري",  months:3, price:300 },  // ✓
+    { label:"شهر - جلوبال",        months:1, price:200 },  // ✓
+    { label:"3 شهور - جلوبال",     months:3, price:500 },  // ✓
+  ]},
+  { id:"psplus", name:"PlayStation Plus", cat:"ألعاب", desc:"لعب أونلاين وألعاب مجانية كل شهر.", plans:[
+    { label:"Essential - شهر", months:1, price:225 },  // ⚠ السوق بين 200 و250
+    { label:"Extra - شهر",     months:1, price:400 },  // ⚠ السوق بين 350 و450
+  ]},
+  { id:"topup", name:"شحن ألعاب (UC / ببجي)", cat:"ألعاب", desc:"شحن سريع لحسابك، ابعتلنا الباقة اللي عايزها.", plans:[
+    { label:"ابتداءً من (حسب الباقة)", months:null, price:50 },  // ⚠ بدون مصدر
+  ]},
+  { id:"googleone", name:"Google One", cat:"رصيد وتخزين", desc:"مساحة تخزين سحابية لصورك وملفاتك وإيميلاتك.", plans:[
+    { label:"1 تيرا - شهر",     months:1, price:250 },   // ✓
+    { label:"1 تيرا - 3 شهور",  months:3, price:500 },   // ✓
+    { label:"5 تيرا - شهر",     months:1, price:800 },   // ✓
+    { label:"5 تيرا - 3 شهور",  months:3, price:1300 },  // ✓
+  ]},
+  { id:"googleplay", name:"رصيد Google Play", cat:"رصيد وتخزين", desc:"ادفع في جوجل بلاي من غير كارت دولي.", plans:[
+    { label:"رصيد يبدأ من 100 ج", months:null, price:100 },  // ✓
+  ]},
+  { id:"icloud", name:"شحن رصيد iCloud", cat:"رصيد وتخزين", desc:"اشحن رصيدك للتطبيقات والتخزين من غير فيزا.", plans:[
+    { label:"رصيد 150 ج", months:null, price:300 },  // ✓
+    { label:"رصيد 200 ج", months:null, price:400 },  // ✓
+    { label:"رصيد 250 ج", months:null, price:500 },  // ✓
+  ]}
+];
+
+/* ===== باقات التوفير: items = ids الخدمات، off = نسبة الخصم % (مثال، حدّدها إنت) ===== */
+const BUNDLES = [
+  { name:"باقة الذكاء",        sub:"للشغل والدراسة",   items:["chatgpt","gemini"],              off:10 },
+  { name:"باقة المصمم",        sub:"تصميم ومونتاج",    items:["canva","capcut","adobe"],        off:10 },
+  { name:"باقة الترفيه",       sub:"مشاهدة وموسيقى",   items:["netflix","spotify","youtube"],   off:10 },
+  { name:"باقة المشاهدة",      sub:"أفلام ومسلسلات",   items:["netflix","shahid","disney"],     off:10 },
+  { name:"باقة الدراسة والشغل", sub:"إنتاجية وتعلّم",   items:["m365","notion","duolingo"],      off:10 }
+];
+
+/* ===== آراء العملاء: أمثلة للشكل فقط، حط آراء حقيقية ===== */
+const REVIEWS = [
+  { n:"محمد", c:"القاهرة", t:"الاشتراك وصلني بسرعة والسعر كان أحسن من أي مكان تاني. هكلمهم تاني أكيد." },
+  { n:"سارة", c:"الإسكندرية", t:"حصلت مشكلة صغيرة في الحساب وحلوها في نفس اليوم. تعامل محترم جداً." },
+  { n:"أحمد", c:"الإسماعيلية", t:"اشتركت في أكتر من خدمة وكله شغال تمام. وفروا عليا فلوس كتير." }
+];
+
+/* ======================= الكود (مش محتاج تعدل تحت) ======================= */
+const $ = id => document.getElementById(id);
+const num = n => Math.round(n).toLocaleString("en");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const wa = txt => "https://wa.me/" + STORE.whatsapp + "?text=" + encodeURIComponent(txt);
+const reduce = matchMedia("(prefers-reduced-motion:reduce)").matches;
+const CUR = STORE.currency;
+document.querySelectorAll("[data-wa]").forEach(a => a.href = wa("السلام عليكم، عايز أستفسر عن الاشتراكات"));
+
+const byId = id => PRODUCTS.find(p => p.id === id);
+const monthPlan = p => p.plans.filter(x => x.months === 1).sort((a,b) => a.price - b.price)[0];
+const minPlan = p => p.plans.slice().sort((a,b) => a.price - b.price)[0];
+const startPlan = p => monthPlan(p) || minPlan(p);
+const isBest = p => p.badge === "الأكثر مبيعاً";
+const durText = m => m < 1 ? "أسبوع" : m === 1 ? "شهر" : m === 2 ? "شهرين" : m < 11 ? m + " شهور" : m === 12 ? "سنة" : m === 24 ? "سنتين" : m === 36 ? "3 سنين" : m + " شهر";
+function avail(p){
+  const ms = [...new Set(p.plans.filter(x => x.months != null).map(x => x.months))].sort((a,b) => a-b).map(durText);
+  const other = p.plans.filter(x => x.months == null).map(x => x.label);
+  return ms.concat(other).join(" · ");
+}
+
+/* صورة الخدمة (SVG بنفسجي) */
+const PAL = [["#7C3AED","#312E81"],["#9333EA","#581C87"],["#6D28D9","#1E1B4B"],["#A855F7","#6B21A8"]];
+const ICON = {
+  "ترفيه":'<rect x="-46" y="-30" width="92" height="60" rx="12" fill="none" stroke="#fff" stroke-width="5"/><path d="M-10-16 18 0-10 16z" fill="#fff"/>',
+  "موسيقى":'<path d="M-6-36 30-44V16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/><path d="M-6-36V24" stroke="#fff" stroke-width="6"/><circle cx="-18" cy="26" r="14" fill="#fff"/><circle cx="18" cy="18" r="14" fill="#fff"/>',
+  "ذكاء اصطناعي":'<path d="M0-44C4-14 14-4 44 0 14 4 4 14 0 44-4 14-14 4-44 0-14-4-4-14 0-44z" fill="#fff"/><circle cx="34" cy="-30" r="6" fill="#fff"/>',
+  "تصميم وإنتاجية":'<rect x="-40" y="-8" width="60" height="44" rx="8" fill="none" stroke="#fff" stroke-width="5"/><rect x="-20" y="-36" width="60" height="44" rx="8" fill="#fff" fill-opacity=".9"/>',
+  "شغل ودراسة":'<path d="M0-24C-8-34-24-34-40-30V30C-24 26-8 26 0 36z"/><path d="M0-24C8-34 24-34 40-30V30C24 26 8 26 0 36z"/>',
+  "رصيد وتخزين":'<rect x="-46" y="-28" width="92" height="56" rx="10"/><path d="M-46-8h92"/><path d="M-30 14h24"/>',
+  "ألعاب":'<rect x="-48" y="-24" width="96" height="52" rx="26" fill="none" stroke="#fff" stroke-width="5"/><path d="M-26-6v16M-34 2h16" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="24" cy="-2" r="5" fill="#fff"/><circle cx="36" cy="10" r="5" fill="#fff"/>'
+};
+function art(p){
+  if (p.img) return `<img class="art" src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy">`;
+  const i = PRODUCTS.indexOf(p), [a,b] = PAL[i % PAL.length], id = "g" + i + Math.random().toString(36).slice(2,6);
+  return `<svg viewBox="0 0 400 220" role="img" aria-label="${esc(p.name)}"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>
+  <rect width="400" height="220" fill="url(#${id})"/><circle cx="350" cy="30" r="90" fill="#fff" fill-opacity=".07"/><circle cx="40" cy="210" r="80" fill="#fff" fill-opacity=".07"/>
+  <g transform="translate(200 84)" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">${ICON[p.cat] || ICON["ترفيه"]}</g>
+  <text x="200" y="186" text-anchor="middle" fill="#fff" font-size="26" font-weight="800" font-family="Noto Kufi Arabic,sans-serif">${esc(p.name.length>20?p.name.slice(0,19)+"…":p.name)}</text></svg>`;
+}
+
+/* كارت الخدمة في القائمة */
+function cardHTML(p){
+  const sp = startPlan(p), mp = monthPlan(p), i = PRODUCTS.indexOf(p);
+  const from = mp ? "" : "من ";
+  const sub = sp.months == null ? sp.label : sp.label.includes(" - ") ? sp.label : sp.label;
+  return `<article class="card">${p.badge?`<span class="badge">${esc(p.badge)}</span>`:""}
+    <a href="#p-${p.id}" class="clk" aria-label="${esc(p.name)}">${art(p)}</a>
+    <div class="body"><h3><a href="#p-${p.id}">${esc(p.name)}</a></h3><p>${esc(p.desc)}</p>
+      <div class="price"><small>${from}</small><b>${num(sp.price)}</b><small>${CUR} / ${esc(sub)}</small>${sp.old?`<s>${num(sp.old)}</s><i>وفّر ${Math.round((1-sp.price/sp.old)*100)}%</i>`:""}</div>
+      <div class="per">${mp ? "المدد المتاحة" : "المتاح فقط"}: ${esc(avail(p))}</div>
+      <div class="acts"><a class="btn" href="#p-${p.id}">تفاصيل الاشتراك</a>${mp?`<button class="btn alt" data-buy="${i}">شراء شهر</button>`:""}</div>
+    </div></article>`;
+}
+
+/* القائمة والفلترة */
+let cat = "الكل", term = "";
+const cats = ["الكل", ...new Set(PRODUCTS.map(p => p.cat))];
+const io = ("IntersectionObserver" in window) ? new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target);} }), {threshold:.12}) : null;
+function tag(sel){ document.querySelectorAll(sel).forEach(e => { e.classList.add("rv"); e.style.transitionDelay = ([...e.parentNode.children].indexOf(e) % 6) * 70 + "ms"; }); }
+function reveal(){ document.querySelectorAll(".rv:not(.in)").forEach(e => io ? io.observe(e) : e.classList.add("in")); }
+function draw(){
+  $("chips").innerHTML = cats.map(c => `<button class="chip" aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+  const list = PRODUCTS.filter(p => (cat==="الكل"||p.cat===cat) && (p.name+p.desc).toLowerCase().includes(term)).sort((a,b) => isBest(b) - isBest(a));
+  $("grid").innerHTML = list.length ? list.map(cardHTML).join("") : `<p class="empty">مفيش نتايج. جرّب كلمة تانية أو كلمنا واتساب وهنساعدك.</p>`;
+  document.querySelectorAll("#grid .card").forEach((e,i) => { e.classList.add("rv"); e.style.transitionDelay = (i%6)*60+"ms"; });
+  reveal();
+}
+function pick(c){ cat = c; $("q").value = ""; term = ""; draw(); }
+
+/* باقات */
+function bundleCalc(b){ const its = b.items.map(byId).filter(Boolean).map(p => ({p, pl:monthPlan(p)})).filter(x => x.pl); const sum = its.reduce((s,x) => s + x.pl.price, 0), now = sum*(1-b.off/100); return {its,sum,now,save:sum-now}; }
+function bundleHTML(b){ const i = BUNDLES.indexOf(b), c = bundleCalc(b); return `<article class="bun"><span class="save">وفّر ${num(c.save)} ${CUR}</span><h3>${esc(b.name)}</h3><small>${esc(b.sub)}</small><ul>${c.its.map(x => `<li><a href="#p-${x.p.id}">${esc(x.p.name)}</a> <small>(${esc(x.pl.label)})</small></li>`).join("")}</ul><div><s>${num(c.sum)}</s> <span class="np">${num(c.now)}</span> ${CUR} / شهر</div><button class="btn" data-addb="${i}">أضف الباقة للسلة</button></article>`; }
+
+/* السلة */
+let CART = [];
+const cnt = () => CART.reduce((s,x) => s + x.q, 0);
+function renderCart(){
+  const n = cnt(), total = CART.reduce((s,x) => s + x.q*x.price, 0);
+  ["cc","cc2"].forEach(id => { const b = $(id); b.textContent = n; b.hidden = !n; });
+  $("dl").innerHTML = CART.length ? CART.map((x,i) => `<div class="it"><div>${esc(x.name)}<small>${esc(x.period)} · ${num(x.price)} ${CUR}</small></div><div class="qty"><button data-q="${i}:-1" aria-label="تقليل">−</button><b>${x.q}</b><button data-q="${i}:1" aria-label="زيادة">+</button></div></div>`).join("") : `<p class="empty">السلة فاضية. ضيف اللي يعجبك.</p>`;
+  $("tot").textContent = num(total) + " " + CUR;
+  const msg = "السلام عليكم، عايز أطلب:\n" + CART.map(x => `- ${x.name} (${x.period}) × ${x.q} = ${num(x.price*x.q)} ${CUR}`).join("\n") + `\nالإجمالي: ${num(total)} ${CUR}`;
+  const s = $("send"); s.href = CART.length ? wa(msg) : "#"; s.style.opacity = CART.length ? 1 : .5;
+}
+function add(key,name,price,period){ const f = CART.find(x => x.key===key); f ? f.q++ : CART.push({key,name,price,period,q:1}); renderCart(); openCart(); }
+function openCart(o=true){ $("drawer").classList.toggle("open",o); $("ov").classList.toggle("open",o); $("drawer").setAttribute("aria-hidden",String(!o)); if(o) $("dx").focus(); }
+
+/* صفحة الخدمة */
+const DETAILS = ["التسليم بعد تأكيد الدفع على واتساب.", "نوع الحساب (مشترك أو خاص أو على إيميلك) بنوضحه لك قبل الدفع.", "ضمان طول مدة الاشتراك: لو حصلت مشكلة بنصلحها أو نبدّلها.", "الدفع: انستا باي، محفظة كاش، فوري، تاب تاب سند، براق."];
+function related(p){
+  const same = PRODUCTS.filter(x => x !== p && x.cat === p.cat).sort((a,b) => isBest(b) - isBest(a));
+  const more = PRODUCTS.filter(x => x !== p && !same.includes(x) && isBest(x));
+  return same.concat(more).slice(0,4);
+}
+function renderProduct(p, sel){
+  const def = p.plans.indexOf(startPlan(p));
+  sel = sel == null ? def : sel;
+  curP = p; const pl = p.plans[sel], i = PRODUCTS.indexOf(p);
+  const bs = BUNDLES.filter(b => b.items.includes(p.id)); const bl = (bs.length ? bs : BUNDLES.filter(b => b.items.some(id => byId(id) && byId(id).cat === p.cat))).slice(0,3);
+  $("pv").innerHTML = `<div class="wrap pp-wrap">
+    <nav class="crumb" aria-label="مسار الصفحة"><a href="#top">الرئيسية</a> › <a href="#products" data-cat="${esc(p.cat)}">${esc(p.cat)}</a> › <span>${esc(p.name)}</span></nav>
+    <div class="pp">
+      <div class="pp-art">${p.badge?`<span class="badge">${esc(p.badge)}</span>`:""}${art(p)}</div>
+      <div class="pp-info">
+        <h1>${esc(p.name)}</h1><p class="pd">${esc(p.desc)}</p>
+        <h2 class="sh">الفترات المتاحة</h2>
+        <div class="plans" role="radiogroup" aria-label="اختار الفترة">${p.plans.map((x,k) => `<button class="plan" role="radio" aria-checked="${k===sel}" data-sel="${k}"><span class="pl"><b>${esc(x.label)}</b>${x.months>1?`<small>≈ ${num(x.price/x.months)} ${CUR} / شهر</small>`:""}</span><span class="pr">${x.old?`<s>${num(x.old)}</s>`:""}<b>${num(x.price)}</b> ${CUR}</span></button>`).join("")}</div>
+        <div class="sum"><span>اخترت: <b>${esc(pl.label)}</b></span><span class="tt">${num(pl.price)} ${CUR}</span></div>
+        <div class="acts big"><button class="btn" data-addp="${i}:${sel}">أضف للسلة</button><a class="btn ghost" target="_blank" rel="noopener" href="${wa(`السلام عليكم، عايز أطلب ${p.name} (${pl.label}) بسعر ${num(pl.price)} ${CUR}`)}">اطلب مباشرة على واتساب</a></div>
+        <h2 class="sh">تفاصيل الاشتراك</h2>
+        <ul class="det">${(p.details||[]).concat(DETAILS).map(d => `<li>${esc(d)}</li>`).join("")}</ul>
+      </div>
+    </div>
+    ${bl.length ? `<h2 class="sh sec">باقات مناسبة مع ${esc(p.name)}</h2><div class="cols3" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">${bl.map(bundleHTML).join("")}</div>` : ""}
+    <h2 class="sh sec">اشتراكات قريبة</h2><div class="grid">${related(p).map(cardHTML).join("")}</div>
+  </div>`;
+  document.title = p.name + " | Bibalash Services";
+}
+
+/* التنقل بين الرئيسية وصفحة الخدمة (بالضغط مباشرة، من غير الاعتماد على تغيّر الرابط) */
+let onProduct = false, curP = null;
+function nav(h, push){
+  const p = h.startsWith("p-") && byId(h.slice(2));
+  if (p){ $("top").hidden = true; $("pv").hidden = false; onProduct = true; renderProduct(p); scrollTo(0,0); }
+  else {
+    $("pv").hidden = true; $("top").hidden = false; curP = null; document.title = "Bibalash Services | بيبالاش للخدمات الرقمية";
+    const el = h && document.getElementById(h);
+    if (el) el.scrollIntoView(); else if (onProduct || !h) scrollTo(0,0);
+    onProduct = false;
+  }
+  if (push){ try { if (location.hash.slice(1) !== h) history.pushState(null, "", "#" + h); } catch(_){} }
+}
+function route(){ nav(decodeURIComponent(location.hash.slice(1)), false); }
+
+/* الأحداث */
+document.addEventListener("click", e => {
+  const t = e.target.closest("button,a,.tile2"); if(!t) return;
+  const d = t.dataset;
+  if (d.buy !== undefined){ const p = PRODUCTS[+d.buy], pl = monthPlan(p); add(`p:${p.id}:${p.plans.indexOf(pl)}`, p.name, pl.price, pl.label); }
+  else if (d.addp){ const [i,k] = d.addp.split(":").map(Number), p = PRODUCTS[i], pl = p.plans[k]; add(`p:${p.id}:${k}`, p.name, pl.price, pl.label); }
+  else if (d.sel !== undefined){ if (curP) renderProduct(curP, +d.sel); }
+  else if (d.addb !== undefined){ const b = BUNDLES[+d.addb], c = bundleCalc(b); add("b:"+b.name, b.name, c.now, "باقة شهر"); }
+  else if (d.q){ const [i,x] = d.q.split(":").map(Number); CART[i].q += x; if(CART[i].q<1) CART.splice(i,1); renderCart(); }
+  else if (t.hasAttribute("data-cart")) openCart();
+  else if (t.id === "dx") openCart(false);
+  else if (d.quick){ cat = "الكل"; term = d.quick.toLowerCase(); $("q").value = d.quick; draw(); }
+  else if (d.cat){ pick(d.cat); if (t.tagName === "BUTTON"){ nav("products", true); } }
+  const a = e.target.closest('a[href^="#"]');
+  if (a && a.getAttribute("href").length > 1){ e.preventDefault(); nav(a.getAttribute("href").slice(1), true); }
+});
+$("chips").addEventListener("click", e => { const c = e.target.dataset.c; if(c){ cat = c; draw(); } });
+$("q").addEventListener("input", e => { term = e.target.value.trim().toLowerCase(); draw(); });
+$("ov").addEventListener("click", () => openCart(false));
+addEventListener("keydown", e => { if(e.key==="Escape") openCart(false); });
+addEventListener("hashchange", route); addEventListener("popstate", route);
+addEventListener("scroll", () => { document.querySelector("header.top").classList.toggle("sc", scrollY>10); $("up").classList.toggle("show", scrollY>500); }, {passive:true});
+$("up").addEventListener("click", () => scrollTo({top:0, behavior: reduce ? "auto" : "smooth"}));
+
+/* مكونات الرئيسية */
+$("revs").innerHTML = REVIEWS.map(r => `<div class="box"><div class="stars" aria-label="5 من 5">★★★★★</div><p>${esc(r.t)}</p><div class="who"><span class="av">${esc(r.n[0])}</span>${esc(r.n)} · ${esc(r.c)}</div></div>`).join("");
+$("bundles-grid").innerHTML = BUNDLES.map(bundleHTML).join("");
+$("tiles").innerHTML = cats.filter(c => c!=="الكل").map(c => { const L = PRODUCTS.filter(p => p.cat===c); return `<button class="tile2" data-cat="${esc(c)}"><span class="ti"><svg width="30" height="30" viewBox="-60 -60 120 120" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[c]||ICON["ترفيه"]}</svg></span><b>${esc(c)}</b><small>${L.length} خدمة · من ${num(Math.min(...L.map(p => minPlan(p).price)))} ${CUR}</small></button>`; }).join("");
+$("quick").innerHTML = PRODUCTS.filter(isBest).slice(0,4).map(p => `<a href="#products" data-quick="${esc(p.name)}"><b>${esc(p.name)}</b><small>من ${num(minPlan(p).price)} ${CUR}</small></a>`).join("");
+const S = {s1:PRODUCTS.length, s2:cats.length-1, s3:document.querySelectorAll(".pill").length};
+function countUp(el,to){ if(reduce){ el.textContent = to; return; } const t0 = performance.now(); (function f(t){ const p = Math.min((t-t0)/1000,1); el.textContent = Math.round(to*p); if(p<1) requestAnimationFrame(f); })(t0); }
+const cio = io && new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ countUp(e.target, S[e.target.id]); cio.unobserve(e.target);} }), {threshold:.6});
+document.querySelectorAll("[data-n]").forEach(el => cio ? cio.observe(el) : (el.textContent = S[el.id]));
+tag(".head,.box,.pill,details,.cta,.trust div,.bun,.tile2,.stat,.quick a");
+renderCart(); draw(); route();
+</script>
+</body>
+</html>
